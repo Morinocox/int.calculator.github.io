@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function calc() {
+        p = document.getElementById("p").value;
+        r = document.getElementById("r").value;
+        t = document.getElementById("t").value;
+        var int = document.getElementsByName("int").value;
+
+        if (document.f.int[0].checked == true) {
+          sip = (p * r * t) / 100;
+          ta = p * 1 + sip * 1;
+          document.getElementById("i").value = sip;
+          document.getElementById("a").value = ta;
+        } else if (document.f.int[1].checked == true) {
+          cta = p * Math.pow(1 + r / 100, t);
+          cmp = cta * 1 - p * 1;
+          document.getElementById("i").value = cmp;
+          document.getElementById("a").value = cta;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="f">
+      <h1>Interest Calculator</h1>
+      Principal = <input type="text" id="p" autofocus /> <br /><br /><br />
+      Rate of Interest = <input type="text" id="r" /> <br /><br /><br />
+      Time (in years) = <input type="text" id="t" /> <br /><br />
+      <h1>Interest Type</h1>
+      <input type="radio" name="int" value="si" /> Simple Interest
+
+      <input type="radio" name="int" value="ci" /> Compound Interest
+      <br /><br />
+      <hr noshade />
+      Interest <input type="text" id="i" /> <br /><br />
+      Amount <input type="text" id="a" /> <br /><br />
+      <input type="button" name="cal" value="Calculate" onclick="calc()" />
+
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
