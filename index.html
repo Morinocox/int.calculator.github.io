@@ -1,44 +1,432 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script>
-      function calc() {
-        p = document.getElementById("p").value;
-        r = document.getElementById("r").value;
-        t = document.getElementById("t").value;
-        var int = document.getElementsByName("int").value;
-
-        if (document.f.int[0].checked == true) {
-          sip = (p * r * t) / 100;
-          ta = p * 1 + sip * 1;
-          document.getElementById("i").value = sip;
-          document.getElementById("a").value = ta;
-        } else if (document.f.int[1].checked == true) {
-          cta = p * Math.pow(1 + r / 100, t);
-          cmp = cta * 1 - p * 1;
-          document.getElementById("i").value = cmp;
-          document.getElementById("a").value = cta;
-        }
-      }
-    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial | DesignMediaX</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="boxicons-2.0.9/css/boxicons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
   </head>
-  <body>
-    <form name="f">
-      <h1>Interest Calculator</h1>
-      Principal = <input type="text" id="p" autofocus /> <br /><br /><br />
-      Rate of Interest = <input type="text" id="r" /> <br /><br /><br />
-      Time (in years) = <input type="text" id="t" /> <br /><br />
-      <h1>Interest Type</h1>
-      <input type="radio" name="int" value="si" /> Simple Interest
+  <body id="home">
+    <div class="scroll-up-btn">
+      <i class="bx bx-up-arrow-alt bx-sm"></i>
+    </div>
+    <div class="showcase">
+      <!-- navbar top section -->
 
-      <input type="radio" name="int" value="ci" /> Compound Interest
-      <br /><br />
-      <hr noshade />
-      Interest <input type="text" id="i" /> <br /><br />
-      Amount <input type="text" id="a" /> <br /><br />
-      <input type="button" name="cal" value="Calculate" onclick="calc()" />
+      <div class="navbar-top">
+        <ul class="left">
+          <li><a href="#">Buenos Aires</a></li>
+          <li>
+            <a href="#"
+              ><i class="bx bxs-time bx-xs"></i> Mon - Sat: 9:00 - 17:00</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="bx bxs-map bx-xs"></i> Palermo CABA</a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxs-phone bx-xs"></i> +54-911-1234-5678</a>
+          </li>
+        </ul>
+        <ul class="right">
+          <li>
+            <a href="#"><i class="bx bxl-twitter bx-xs"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-whatsapp bx-xs"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-facebook bx-xs"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-instagram-alt bx-xs"></i></a>
+          </li>
+        </ul>
+      </div>
 
-      <input type="reset" value="Reset" />
-    </form>
+      <!-- navbar bottom section -->
+      <div class="navbar-bottom">
+        <a href="#home" class="brand-left">FINTECH</a>
+        <ul class="menu-right">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#teams">Teams</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#"><i class="bx bx-search bx-sm" id="search-btn"></i></a>
+          </li>
+        </ul>
+        <div class="search-form">
+          <input
+            type="search"
+            name="search-box"
+            id="search-box"
+            placeholder="search here..."
+          />
+          <label for="search-box" class="bx bx-search bx-sm"></label>
+        </div>
+      </div>
+
+      <!-- Showcase content Section -->
+      <div class="showcase-content">
+        <h1>
+          We Deliver Steady Profits <br />
+          <span>& Long-term Security</span>
+        </h1>
+        <p>
+          We are boutique firm designed for Alternative Investors<br />
+          focused on growing the our client's capital with speculative
+          instruments
+        </p>
+        <!-- <a href="#" class="btn btn-left">EXPLORE MORE</a>
+        <a href="#" class="btn btn-right">GET IN TOUCH</a> -->
+      </div>
+    </div>
+
+    <!-- Services / Goal Section  -->
+
+    <section id="services" class="bg-light py-3">
+      <div class="wrapper">
+        <div class="items">
+          <div class="item">
+            <i class="bx bxs-badge-dollar bx-lg"></i>
+            <h3>Financial Services</h3>
+            <p>
+              Focused on binary options and forex markets, as alternative
+              strategies for growing your capital.
+            </p>
+          </div>
+          <!-- <div class="item">
+            <i class="bx bxs-building-house bx-lg"></i>
+            <h3>Government Services</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
+              blanditiis.
+            </p>
+          </div> -->
+          <div class="item">
+            <i class="bx bxs-credit-card-front bx-lg"></i>
+            <h3>Customer Products</h3>
+            <p>
+              We can either manage your account, or have your funds deposited
+              our our investor's pool.
+            </p>
+          </div>
+          <div class="item">
+            <i class="bx bxs-building-house bx-lg"></i>
+            <h3>Long-term Security</h3>
+            <p>
+              Rest assure we have time on our side. We'll slowly but firmly grow
+              your money.
+            </p>
+          </div>
+        </div>
+        <div id="goal" class="goal">
+          <div class="goal-img">
+            <img src="/images/photo1.jpg" />
+          </div>
+          <div class="goal-text">
+            <a href="#">Our Priorities</a>
+            <h2>
+              Investment Banking & <br />
+              Capital Market
+            </h2>
+            <div class="contents">
+              <div class="content p-4">
+                <i class="bx bx-check bx-sm"></i>
+              </div>
+              <div class="content p-4">
+                <h3>Investment Management</h3>
+                <p>
+                  We'll set up the necessaryu structures to have you covered on
+                  all fronts.
+                </p>
+              </div>
+            </div>
+            <div class="contents">
+              <div class="content p-4">
+                <i class="bx bx-check bx-sm"></i>
+              </div>
+              <div class="content p-4">
+                <h3>Private Equity</h3>
+                <p>Get access to distint investment options in Latam.</p>
+              </div>
+            </div>
+            <div class="contents">
+              <div class="content p-4">
+                <i class="bx bx-check bx-sm"></i>
+              </div>
+              <div class="content p-4">
+                <h3>Business Multi Solutions</h3>
+                <p>
+                  We'll get you the exposure you need to forex markets, in a
+                  multiplicity of currencies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio py-3">
+      <h3 class="text-center">Company Portfolio</h3>
+      <h2 class="text-center">
+        Our Latest <span class="text-secondary">Case Studies</span>
+      </h2>
+      <p class="text-center">
+        We help you see the world differently, discover opportunities you may
+        never have <br />
+        imagined and achieve results that bridge what is with what can be
+      </p>
+      <div class="owl-carousel">
+        <div class="item"><img src="./images/photo2.jpg" /></div>
+        <div class="item"><img src="./images/photo3.jpg" /></div>
+        <div class="item"><img src="./images/photo4.jpg" /></div>
+        <div class="item"><img src="./images/photo5.jpg" /></div>
+        <div class="item"><img src="./images/photo6.jpg" /></div>
+        <div class="item"><img src="./images/photo7.jpg" /></div>
+        <div class="item"><img src="./images/photo8.jpg" /></div>
+        <div class="item"><img src="./images/photo9.jpg" /></div>
+        <div class="item"><img src="./images/photo10.jpg" /></div>
+        <div class="item"><img src="./images/photo11.jpg" /></div>
+        <div class="item"><img src="./images/photo12.jpg" /></div>
+        <div class="item"><img src="./images/photo13.jpg" /></div>
+      </div>
+    </section>
+
+    <!-- Secccion Simulador -->
+    <section>
+      <div id="container_info" class="blog">
+        <h2>Compound Interest Calculator</h2>
+        <h3>This calculates the future investment value</h3>
+        <div class="container">
+          <label for="principle" class="text-1">Principle Amount</label>
+          <input
+            class="principle-input"
+            id="principle"
+            autocomplete="off"
+            required
+          />
+
+          <label for="interest" class="text-2">Interest Rate (In %) </label>
+          <input
+            class="interest-input"
+            id="interest"
+            autocomplete="off"
+            required
+          />
+
+          <label for="duration" class="text-3">Duration in Days</label>
+          <input
+            class="duration-input"
+            id="duration"
+            autocomplete="off"
+            required
+          />
+
+          <label for="daily" class="text-4">Daily Contributions</label>
+          <input
+            class="daily-contributions-input"
+            id="daily"
+            autocomplete="off"
+          />
+
+          <button class="btn" id="btn_">Calculate</button>
+
+          <input class="output-area" id="output" disabled />
+        </div>
+      </div>
+    </section>
+
+    <!-- Secccion Equipo -->
+    <section id="teams" class="teams bg-light py-3">
+      <h3 class="text-center">We are there for you</h3>
+      <h2 class="text-center">
+        Meet Our <span class="text-secondary">Professional Team</span>
+      </h2>
+      <p class="text-center">
+        We help you see the world differently, discover opportunities you may
+        never have <br />
+        imagined and achieve results that bridge what is with what can be
+      </p>
+      <div class="wrapper">
+        <div class="card-items">
+          <div class="card">
+            <div class="card-header">
+              <img src="/images/vera.jpg" />
+            </div>
+            <div class="card-body">
+              <h3>Fulana</h3>
+              <h4>Client Relations</h4>
+              <ul>
+                <li>
+                  <a href="#"><i class="bx bxl-twitter bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-whatsapp bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-facebook bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-instagram-alt bx-xs"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img src="/images/kevin.jpg" />
+            </div>
+            <div class="card-body">
+              <h3>Mengano</h3>
+              <h4>Investment Analyst</h4>
+              <ul>
+                <li>
+                  <a href="#"><i class="bx bxl-twitter bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-whatsapp bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-facebook bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-instagram-alt bx-xs"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img src="/images/augusta.jpg" />
+            </div>
+            <div class="card-body">
+              <h3>Sutana</h3>
+              <h4>Co-Founder of Company</h4>
+              <ul>
+                <li>
+                  <a href="#"><i class="bx bxl-twitter bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-whatsapp bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-facebook bx-xs"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-instagram-alt bx-xs"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion Blog -->
+    <section id="blog" class="blog py-3">
+      <div class="wrapper">
+        <div class="header">
+          <span></span>
+          <h4>Business Blog</h4>
+        </div>
+        <div class="blog-info">
+          <h2>Read Our <span class="text-secondary">Latest Insights</span></h2>
+          <a href="#">view all</a>
+        </div>
+        <div class="blog-card">
+          <div class="card">
+            <div class="card-header">
+              <img src="/images/blog1.jpg" />
+            </div>
+            <div class="card-body">
+              <span class="tag tag-yellow">Business</span>
+              <h4>
+                Contactless Payments' <br />
+                Time has come
+              </h4>
+              <div class="footer">
+                <small>April 7, 2022 / 5 comments</small>
+                <a href="#"><i class="bx bx-right-arrow-alt bx-sm"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img src="/images/blog2.jpg" />
+            </div>
+            <div class="card-body">
+              <span class="tag tag-purple">Finance</span>
+              <h4>
+                The Future of Retail: <br />
+                Europe's Ecosystems
+              </h4>
+              <div class="footer">
+                <small>April 11, 2022 / 20 comments</small>
+                <a href="#"><i class="bx bx-right-arrow-alt bx-sm"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img src="/images/blog3.jpg" />
+            </div>
+            <div class="card-body">
+              <span class="tag tag-pink">Marketiing</span>
+              <h4>
+                Digital Transformation <br />
+                Roadmap: Enablers
+              </h4>
+              <div class="footer">
+                <small>April 30, 2022 / 10 comments</small>
+                <a href="#"><i class="bx bx-right-arrow-alt bx-sm"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion Newsletter -->
+    <section id="contact" class="contact bg-secondary py-3">
+      <h2 class="text-center">Subscribe to our Newsletter</h2>
+      <p class="text-center">
+        Receive the latest updates on the currency markets, and stay tuned for
+        our newest developments.<br />
+        Feel free to reach out to us at any time.
+      </p>
+      <div class="wrapper">
+        <form class="text-center">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Email Address"
+          />
+          <button class="button">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Seccion Footer -->
+    <footer class="footer-bottom py-3 text-center">
+      <p>Copyright &copy; 2022 by MorinocoFx. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
